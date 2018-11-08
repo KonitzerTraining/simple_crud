@@ -18,7 +18,7 @@ class CustomerlistController {
     }
 
     function getCustomers () {
-        $this->customers = $this->customerModel->getCustomers();
+        $this->customers = $this->customerModel->get();
     }
 
 

@@ -9,17 +9,38 @@
 class Db
 {
 
+    private $dbh;
     function __construct () {
         echo 'DB';
 
-        $dbh = new PDO('mysql:host=localhost;dbname=littlecrm', 'root', '');
+        $this->dbh = new PDO('mysql:host=localhost;dbname=littlecrm', 'root', '');
 
-        $result = $dbh->query('SELECT * from customer');
+    }
+    function __destruct()
+    {
+        $this->dbh = null;
+    }
+
+    function getAll ($table) {
+        $data = [];
+        $result = $this->dbh->query("SELECT * from $table");
 
         foreach ($result as $row) {
-            print_r($row);
+            $data[] = $row;
         }
-        $dbh = null;
+
+        return $data;
+    }
+    function getOne ($table, $id) {
+
+    }
+
+    function deleteOne ($table, $id) {
+
+    }
+
+    function createOne($table, $data) {
+
     }
 
 

@@ -25,9 +25,16 @@ class CustomerModel extends Db implements ServiceModel
        ];
    }
 
-    function get()
+    function get(...$id)
     {
+        $data = null;
+        if(count($id) > 0) {
+            $data = $this->getOne('customer', $id[0]);
+        } else {
+            $data = $this->getAll('customer');
+        }
         // TODO: Implement get() method.
+        return $data;
     }
 
     function post()
