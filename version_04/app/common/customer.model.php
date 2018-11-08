@@ -36,12 +36,9 @@ class CustomerModel extends Db implements ServiceModel
         return $data;
     }
 
-    function post()
+    function post($data)
     {
-        $this->createOne('customer', [
-           'name' => 'Hans Müller',
-           'plz' => '98098'
-        ]);
+        $this->createOne('customer', $data);
     }
 
     function put()

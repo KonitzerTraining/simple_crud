@@ -9,7 +9,7 @@
 interface ServiceModel
 {
     function get ();
-    function post ();
+    function post ($data);
     function put ();
     function delete ();
 }

@@ -13,7 +13,6 @@ class Db
 
     function __construct()
     {
-        echo 'DB';
 
         $this->dbh = new PDO('mysql:host=localhost;dbname=littlecrm', 'root', '');
 
