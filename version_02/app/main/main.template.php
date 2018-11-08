@@ -1,3 +1,3 @@
 <!-- View -->
-<h1><?= $controller->title ?></h1>
-<p><?= $controller->welcome ?></p>
+<h1><?= $this->title ?></h1>
+<p><?= $this->welcome ?></p>

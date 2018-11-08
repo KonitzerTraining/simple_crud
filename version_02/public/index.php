@@ -6,8 +6,15 @@
 </head>
 <body>
 
+<nav>
+<ul>
+    <li><a href="index.php?page=start">Startseite</a></li>
+    <li><a href="index.php?page=customer">Kunden</a></li>
+</ul>
+</nav>
+
 <?php
-    require_once '../app/main/main.controller.php';
+    require_once '../app/main.php';
 ?>
 
 </body>
