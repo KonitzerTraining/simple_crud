@@ -32,7 +32,15 @@ class Db
         return $data;
     }
     function getOne ($table, $id) {
+        $data = [];
 
+        $result = $this->dbh->query("SELECT * from $table WHERE id = $id");
+
+        foreach ($result as $row) {
+            $data[] = $row;
+        }
+
+        return $data[0];
     }
 
     function deleteOne ($table, $id) {

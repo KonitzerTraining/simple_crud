@@ -33,7 +33,6 @@ class CustomerModel extends Db implements ServiceModel
         } else {
             $data = $this->getAll('customer');
         }
-        // TODO: Implement get() method.
         return $data;
     }
 
