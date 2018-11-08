@@ -1,11 +1,15 @@
 <?php
-require_once 'TextBlock.php';
+/**
+ * Controller
+ */
+require_once '../app/common/TextBlock.php';
 
 class MainController {
     public $title;
 
     function __construct () {
        $this->title = TextBlock::getTextFromId('001');
+       $this->welcome = TextBlock::getTextFromId('002');
     }
 }
 
