@@ -1,8 +1,9 @@
 <?php
 
 require_once '../lib/interfaces/ServiceModel.php';
+require_once '../lib/classes/Db.php';
 
-class CustomerModel implements ServiceModel
+class CustomerModel extends Db implements ServiceModel
 {
    public function getCustomers ()  {
        return [
