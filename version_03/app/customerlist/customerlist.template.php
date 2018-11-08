@@ -2,7 +2,6 @@
 <div class="row">
     <div class="col">
         <h1>Kundenliste</h1>
-
         <table class="table table-striped">
             <thead>
             <tr>
@@ -24,7 +23,6 @@
 
             </tbody>
         </table>
-
     </div>
 </div>
 

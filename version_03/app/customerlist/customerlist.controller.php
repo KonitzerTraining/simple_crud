@@ -2,32 +2,26 @@
 /**
  * Controller
  */
+require_once '../app/common/customer.model.php';
 
 class CustomerlistController {
     public $title;
 
-    public $customers = [
-        [
-            'id' => 3,
-            'name' => 'Hans Müller',
-            'plz' => '93894'
-        ],
-        [
-            'id' => 4,
-            'name' => 'Peter Müller',
-            'plz' => '07898'
-        ],
-        [
-            'id' => 5,
-            'name' => 'Hans-Mayer Müller',
-            'plz' => '23423'
-        ]
-    ];
+    public $customers;
 
     function __construct () {
+       $this->customerModel = new CustomerModel();
+       $this->getCustomers();
 
        require_once 'customerlist.template.php';
+
     }
+
+    function getCustomers () {
+        $this->customers = $this->customerModel->getCustomers();
+    }
+
+
 }
 
 
