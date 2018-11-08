@@ -6,7 +6,7 @@ require_once '../app/common/customer.model.php';
 
 class CustomerNewController {
     public $title;
-
+    public $status = 2;
     public $customers;
 
     function __construct () {
