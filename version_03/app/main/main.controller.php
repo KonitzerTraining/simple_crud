@@ -4,7 +4,6 @@
  */
 require_once '../app/common/TextBlock.php';
 
-echo 'mainC';
 
 class MainController {
     public $title;

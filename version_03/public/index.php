@@ -14,7 +14,7 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="mb-3 row">
         <div class="col">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
