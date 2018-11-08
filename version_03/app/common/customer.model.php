@@ -1,6 +1,7 @@
 <?php
 
-require_once '../../pattern/ServiceModel.php';
+require_once '../lib/interfaces/ServiceModel.php';
+
 class CustomerModel implements ServiceModel
 {
    public function getCustomers ()  {
