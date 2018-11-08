@@ -10,18 +10,22 @@ class Db
 {
 
     private $dbh;
-    function __construct () {
+
+    function __construct()
+    {
         echo 'DB';
 
         $this->dbh = new PDO('mysql:host=localhost;dbname=littlecrm', 'root', '');
 
     }
+
     function __destruct()
     {
         $this->dbh = null;
     }
 
-    function getAll ($table) {
+    function getAll($table)
+    {
         $data = [];
         $result = $this->dbh->query("SELECT * from $table");
 
@@ -31,7 +35,9 @@ class Db
 
         return $data;
     }
-    function getOne ($table, $id) {
+
+    function getOne($table, $id)
+    {
         $data = [];
 
         $result = $this->dbh->query("SELECT * from $table WHERE id = $id");
@@ -43,14 +49,31 @@ class Db
         return $data[0];
     }
 
-    function deleteOne ($table, $id) {
+    function deleteOne($table, $id)
+    {
 
     }
 
-    function createOne($table, $data) {
+    function createOne($table, $data)
+    {
+        $fieldNames = [];
+        $fieldValues = [];
 
+        foreach ($data as $field => $value) {
+            $fieldNames[] = $field;
+
+            $value = (is_string($value)) ? "'$value'" : $value;
+            $fieldValues[] = $value;
+        }
+
+        $query = "INSERT INTO $table (";
+        $query .= implode(', ', $fieldNames);
+        $query .= ") VALUES (";
+        $query .= implode(', ', $fieldValues);
+        $query .= ")";
+
+        $this->dbh->query($query);
     }
-
 
 
 }

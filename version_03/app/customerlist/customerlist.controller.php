@@ -20,7 +20,9 @@ class CustomerlistController {
     function getCustomers () {
         $this->customers = $this->customerModel->get();
 
-        print_r($this->customerModel->getOne('customer', 2 ));
+        //print_r($this->customerModel->getOne('customer', 2 ));
+
+        //$this->customerModel->post();
     }
 
 
