@@ -37,7 +37,6 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php?page=new">Neuer Kunde</a>
                         </li>
-
                     </ul>
 
                     <!-- Ende der Navigation -->

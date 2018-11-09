@@ -1,4 +1,8 @@
 <!-- View -->
+<pre>
+    <?php print_r($_SESSION); ?>
+</pre>
+
 <div class="row">
     <div class="col">
         <h1>Neuer Kunde</h1>
@@ -12,14 +16,14 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                        <input type="text" name="name" class="form-control" id="name">
+                        <input type="text" name="name" class="form-control" id="name" value="<?= $this->name ?>">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="plz" class="col-sm-2 col-form-label">PLZ</label>
                     <div class="col-sm-10">
-                        <input type="text" name="plz" class="form-control" id="plz">
+                        <input type="text" name="plz" class="form-control" id="plz"  value="<?= $this->plz ?>">
                     </div>
                 </div>
 

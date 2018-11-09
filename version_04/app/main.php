@@ -1,6 +1,8 @@
 <?php
 require_once 'Routing.php';
 
+session_start();
+
 $routing = new Routing();
 $controllerPath = $routing->route();
 
