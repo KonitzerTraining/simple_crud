@@ -3,7 +3,12 @@
 
 <div class="row">
     <div class="col">
-        <h1><?= $this->info ?></h1>
+        <h1>Login</h1>
+
+        <?php if ($this->status === 0 OR $this->status === 1): ?>
+        <?php if ($this->status === 1): ?>
+            <div class="alert alert-warning">Falsche Eingabe.</div>
+        <?php endif; ?>
         <form method="POST" action="<?= $_SERVER['PHP_SELF']?>">
 
             <div class="form-group row">
@@ -24,5 +29,10 @@
             <button type="submit" class="btn btn-primary">Login</button>
 
         </form>
+        <?php endif; ?>
+        <?php if ($this->status === 2): ?>
+        <p>Sie sind nun eingeloggt.</p>
+        <?php endif; ?>
+
     </div>
 </div>

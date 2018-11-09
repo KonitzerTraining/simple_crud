@@ -31,8 +31,6 @@ class CustomerNewController
 
     private function validate()
     {
-        echo 'validiere';
-
         $name = $_POST['name'];
         $plz = $_POST['plz'];
 
