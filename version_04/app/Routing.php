@@ -13,10 +13,16 @@ class Routing
         'new' => 'CustomerNew',
         'customer' => 'Customerlist'
     ];
+    private static $loginRoute = 'Login';
+
 
     public function route()
     {
-        if (
+        if (empty ($_SESSION['login'])) {
+
+            $ctrlPath = static::$loginRoute;
+
+        } elseif (
             array_key_exists('page', $_GET) AND
             array_key_exists($_GET['page'], static::$routes)
         ) {
