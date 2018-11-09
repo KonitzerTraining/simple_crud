@@ -8,6 +8,13 @@
 
 class Routing
 {
+    function __construct()
+    {
+        if(key_exists('logout', $_POST)) {
+                session_destroy();
+        }
+    }
+
     private static $routes = [
         'start' => 'Main',
         'new' => 'CustomerNew',

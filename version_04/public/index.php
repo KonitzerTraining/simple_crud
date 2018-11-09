@@ -39,8 +39,12 @@
                         </li>
                     </ul>
 
+
                     <!-- Ende der Navigation -->
                 </div>
+                <form class="form-inline my-2 my-lg-0 text-right" method="post" action="<?= $_SERVER['PHP_SELF']?>">
+                <input name="logout" value="Logout" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                </form>
             </nav>
         </div>
     </div>
